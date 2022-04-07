@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.1rem;
+    gap: 0.3rem;
+}
+
+.footer-light {
+    background-color: var(--black-bga-theme);
+}
+
+.footer-dark {
+    background-color: var(--white-bga-theme);
+}
+
+.footer-text-light {
+    color: var(--black-font-theme);
+}
+
+.footer-text-dark {
+    color: var(--white-font-theme);
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-icon {
+    font-size: 2rem;
+}
+
+.footer-icon:hover {
+    color: var(--st-bordergrey)
+}

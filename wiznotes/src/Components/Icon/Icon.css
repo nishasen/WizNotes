@@ -1,0 +1,28 @@
+.icon-size {
+    width: 2.7rem;
+    height: 2.7rem;
+}
+
+.icon-light {
+    color: var(--st-secondary-color);
+    border-color: var(--st-secondary-color);
+}
+
+.icon-dark {
+    color: var(--st-primary-color);
+    border-color: var(--st-primary-color);
+}
+
+.icon-border {
+    border: 2px solid;
+}
+
+.icon-light:hover {
+    color: var(--st-secondary-hover);
+    border-color: var(--st-secondary-hover);
+}
+
+.icon-dark:hover {
+    color: var(--st-primary-hover);
+    border-color: var(--st-primary-hover);
+}

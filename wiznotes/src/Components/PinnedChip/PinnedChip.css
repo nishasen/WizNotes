@@ -1,0 +1,26 @@
+.pinned-chip {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 0.2rem;
+    border: 2px solid transparent;
+}
+
+.pinned-light {
+    background-color: var(--black-bga-theme);
+    color: var(--st-white);
+}
+
+.pinned-dark {
+    background-color: var(--white-bga-theme);
+    color: var(--st-black);
+}
+
+.pinned-light:hover {
+    border: 2px solid var(--st-black);
+}
+
+.pinned-dark:hover {
+    border: 2px solid var(--st-white);
+}

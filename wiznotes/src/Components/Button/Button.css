@@ -1,0 +1,18 @@
+.btn-large {
+    width: 12rem;
+    font-weight: bold;
+}
+
+.border-black {
+    border-color: var(--st-black);
+    color: var(--st-black);
+}
+
+.border-white {
+    border-color: var(--st-white);
+    color: var(--st-white);
+}
+
+.button-border {
+    border: 2px solid;
+}
