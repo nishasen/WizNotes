@@ -1,0 +1,82 @@
+.main {
+    height: 100vh;
+    margin-top: 0rem;
+}
+
+.auth-card {
+    display: flex;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap:1rem;
+    z-index: 2;
+    width: 22rem;
+    box-shadow: 0.5px 2px 2px 3px hsl(200deg 100% 15% / 10%);
+    background-color: hsla(0, 0%, 98%, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.align-header {
+    text-align: center;
+}
+
+.form-fields {
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.name-fields {
+    gap: 0.5rem;
+}
+
+.card-pane {
+    justify-content: space-between;
+}
+
+.forgot-password {
+    font-weight: bold;
+    text-shadow: 0px 0px 0.5px #000000;
+}
+
+.error-message {
+    color: #8C1926;
+}
+
+.disabled-button {
+    background-color: grey;
+    color: black;
+}
+
+.password-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.eye-icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 1rem;
+}
+
+.error-submit-button {
+    width: 12rem;
+    color: grey;
+}
+
+.submit-button { 
+    width: 12rem;   
+}
+
+.login-button {
+    gap: 0.5rem
+}
+
+.eye-icon:hover {
+    color: #2C363F;
+}
