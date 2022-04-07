@@ -21,12 +21,13 @@ const Card = ({showArchive, showEdit, showTrash, note}) => {
   const { archiveDispatch } = useArchive();
   const { setForm, noteDispatch, setShowForm } = useNote();
   const setBackgroundColor = (color) => {
+   localStorage.setItem(note._id, color);  
    setBackground(color);
   }
   const textTheme = theme==="light" ? "text-light" : "text-dark";
   const cardBg = theme==="light" ? "card-light" : "card-dark";
   return (
-    <div className={`card ${cardBg}`} style={{backgroundColor: background}}>
+    <div className={`card ${cardBg}`} style={{backgroundColor: localStorage.getItem(note._id)}}>
       <div className="priority-tag">
         <div className={`tag ${theme==="light" ? "light-priority" : "dark-priority"}`}>{notePriority.toUpperCase()}</div>
         <div className={`tag ${theme==="light" ? "light-priority" : "dark-priority"}`}>{noteTag.toUpperCase()}</div>
