@@ -1,0 +1,15 @@
+.wallpaper {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+}
+
+.light-bg {
+    background-color: var(--white-bg-theme);
+}
+
+.dark-bg {
+    background-color: var(--black-bg-theme);
+}
