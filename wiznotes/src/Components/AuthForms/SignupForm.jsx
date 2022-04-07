@@ -5,6 +5,12 @@ import { SignupFormDetail } from '../../GeneralFunctions';
 import { HiEye } from 'react-icons/hi';
 import { RiEyeCloseFill } from 'react-icons/ri';
 import { emailRegex, passwordRegex } from '../../RegexForValidation/Validation';
+import axios from 'axios';
+import './AuthForms.css';
+import { useNavigate } from "react-router-dom";
+
+const defaultForm = {
+  firstName: "",
   lastName: "",
   email: "",
   password: "",
