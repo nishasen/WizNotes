@@ -94,8 +94,7 @@ const SearchTab = () => {
                             onChange={(e)=>filterDispatch({type: "SET_PRIORITY", payload: e.target.value})}/>                            
             </div>
             <div className="clear-btn">
-              <Button text="Clear filter" 
-                      size="large" 
+              <Button text="Clear filter"
                       buttonborder="true" 
                       onClick={()=>filterDispatch({type: "CLEAR_FILTER"})}/>
             </div>        
