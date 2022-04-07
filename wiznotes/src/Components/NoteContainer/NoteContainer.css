@@ -1,0 +1,79 @@
+.note-container {
+    max-width: 20rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.note-light {
+    background-color: var(--black-bga-theme);
+}
+
+.note-dark {
+    background-color: var(--white-bga-theme);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priority-container {
+    margin-bottom: 0.5rem;
+}
+
+.note-title, .note-body {
+    color: var(--st-black);
+    border-radius: 0.2rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    outline: transparent;
+}
+
+.note-body {
+    margin: 0;
+}
+
+.note-title::placeholder, .note-body::placeholder { 
+    color: var(--st-darkgrey);
+    opacity: 1; 
+  }
+
+.note-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.note-icons {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.note-body {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: transparent;
+    border: none;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.options {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.labels {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.add-note {
+    margin: 0.5rem 4rem;
+}

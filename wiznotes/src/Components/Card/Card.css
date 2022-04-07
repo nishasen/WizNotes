@@ -1,0 +1,115 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 0.5rem;
+    width: 14rem;
+    border-radius: 0.5rem;
+}
+
+.card-light {
+    background-color: var(--black-bga-theme);
+}
+
+.card-dark {
+    background-color: var(--white-bga-theme);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-div {
+    width: 9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-light {
+    color: var(--white-bg-theme);
+}
+
+.text-dark {
+    color: var(--black-bg-theme);
+}
+
+.card-date {
+    padding: 0 0.5rem;
+}
+
+.card-desc {
+    width: 10rem;
+    height: max-content;
+    max-height: 8rem; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    padding: 0 0.5rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem
+}
+
+.card-icons {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.palette {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.2rem 0;
+}
+
+.colors {
+    border-radius: 50%;
+    border: 1px solid var(--st-white);
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.gryffindor {
+    background-color: var(--gryffindor);
+}
+
+.hufflepuff {
+    background-color: var(--hufflepuff);
+}
+
+.ravenclaw {
+    background-color: var(--ravenclaw);
+}
+
+.slytherin {
+    background-color: var(--slytherin);
+}
+
+.tick {
+    color: var(--st-white);
+    margin: auto;
+}
+
+.priority-tag {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.light-priority {
+    background-color: var(--st-secondary-color);
+    color: var(--st-black);
+}
+
+.dark-priority {
+    background-color: var(--st-primary-color);
+    color: var(--st-white);
+}
+
+.tag {
+    padding: 0 0.2rem;
+    border-radius: 0.1rem;
+}
