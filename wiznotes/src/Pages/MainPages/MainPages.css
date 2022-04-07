@@ -1,0 +1,11 @@
+.pages {
+    margin-top: 3.6rem;
+    margin-left: 13rem
+}
+
+@media only screen and (max-width: 615px) {
+    .pages {
+        margin: 0 auto;
+        margin-top: 3.6rem;
+    }
+}
