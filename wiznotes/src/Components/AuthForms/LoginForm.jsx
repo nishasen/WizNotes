@@ -63,7 +63,6 @@ const LoginForm = () => {
         localStorage.setItem("userToken", res.data.encodedToken);
         navigate("../notes", { replace: true });
       }
-      // saving the encodedToken in the localStorage
     } catch (error) {
       Toast("Could not log in, try again later", "error")
       console.error(error);

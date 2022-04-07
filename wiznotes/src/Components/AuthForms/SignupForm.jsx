@@ -67,11 +67,8 @@ const SignupForm = () => {
       if(res.status===201){
         setForm(defaultForm);
         Toast("Successfully signed up", "success")
-        //localStorage.setItem("userToken", res.data.encodedToken);
         navigate("../login", { replace: true });
-      }
-      // saving the encodedToken in the localStorage
-      
+      } 
     } catch (error) {
       Toast("Could not signed up, try again later.", "error")
       console.error(error);
