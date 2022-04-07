@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MainPages.css';
 import { Wallpaper, Topnav, SideNavigation, TrashPage } from '../../Components';
 
 const Trash = () => {
-  //const {page, setPage} = usePage();
   return (
     <>
       <Wallpaper />  

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MainPages.css';
 import { Wallpaper, Topnav, SideNavigation, ArchivePage } from '../../Components';
 
