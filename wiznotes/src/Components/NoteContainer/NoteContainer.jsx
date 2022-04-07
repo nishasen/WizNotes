@@ -108,7 +108,13 @@ const NoteContainer = () => {
           </button>
           <Icon>
             <IoCloseCircle className="note-icons" onClick={()=>{
-                                                        setForm(defaultForm)
+                                                        setForm({
+                                                          noteTitle: "",
+                                                          noteBody: "",
+                                                          notePriority: "low",
+                                                          noteTag: "home", 
+                                                          noteDate: new Date().toLocaleString()
+                                                        })
                                                         setShowForm(false)}}/>
           </Icon>
         </div>
