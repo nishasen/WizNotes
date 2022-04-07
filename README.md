@@ -31,7 +31,13 @@ Note-taking can be something you do for yourself, or something you do with and f
 - Filter notes (based on tags, priority, date)
 
 ## Live link
+[Wiznotes](https://wiznotes.vercel.app/)
 
+## How to run app locally
+$ git clone https://github.com/nishasen/WizNotes.git
+$ cd wiznotes
+$ npm install
+$ npm start
 
 ## Screenshots
 
