@@ -77,21 +77,21 @@ const NoteContainer = () => {
                           label="High"
                           forLabel="high"
                           labelClassName="text-black" 
-                          checked={form.notePriority===value}
+                          checked={form.notePriority==="high"}
                           onChange={(e)=>handleChange(e)} required/>     
             <CheckboxRadio type="radio"
                           name="notePriority"
                           value="medium"
                           label="Medium"
                           forLabel="medium"
-                          checked={form.notePriority===value}
+                          checked={form.notePriority==="low"}
                           labelClassName="text-black" onChange={(e)=>handleChange(e)} required/>     
             <CheckboxRadio type="radio"
                           name="notePriority"
                           value="low"
                           label="Low"
                           forLabel="low"
-                          checked={form.notePriority===value}
+                          checked={form.notePriority==="low"}
                           labelClassName="text-black" onChange={(e)=>handleChange(e)} required/>                                      
           </div>}
         </div>
