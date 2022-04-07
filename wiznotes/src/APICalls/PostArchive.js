@@ -9,7 +9,6 @@ export const PostArchive = async(note, archiveDispatch, noteDispatch) => {
             }
         };
         const response = await axios.post(`/api/notes/archives/${note._id}`, { note }, config);
-        console.log(response)
         archiveDispatch({ type: "ADD_ARCHIVE", payload: response.data.archives });
         noteDispatch({ type: "ADD_NOTE", payload: response.data.notes });
     } catch(error) {
