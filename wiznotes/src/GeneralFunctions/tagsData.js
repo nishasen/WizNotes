@@ -1,0 +1,37 @@
+export const tagsData = [{
+    label: "Home",
+    name: "noteTag",
+    value: "home",
+    type: "checkbox",
+    forLabel: "home"
+}, {
+    label: "Work",
+    name: "noteTag",
+    value: "work",
+    type: "checkbox",
+    forLabel: "work"
+}, {
+    label: "Exercise",
+    name: "noteTag",
+    value: "exercise",
+    type: "checkbox",
+    forLabel: "exercise"
+}, {
+    label: "Chores",
+    name: "noteTag",
+    value: "chores",
+    type: "checkbox",
+    forLabel: "chores"
+}, {
+    label: "Creativity",
+    name: "noteTag",
+    value: "creativity",
+    type: "checkbox",
+    forLabel: "creativity"
+}, {
+    label: "Others",
+    name: "noteTag",
+    value: "others",
+    type: "checkbox",
+    forLabel: "others"
+}]

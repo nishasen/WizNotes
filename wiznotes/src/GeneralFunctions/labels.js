@@ -1,0 +1,37 @@
+export const labels = [{
+    label: "Home",
+    name: "noteTag",
+    value: "home",
+    type: "radio",
+    forLabel: "home"
+}, {
+    label: "Work",
+    name: "noteTag",
+    value: "work",
+    type: "radio",
+    forLabel: "work"
+}, {
+    label: "Exercise",
+    name: "noteTag",
+    value: "exercise",
+    type: "radio",
+    forLabel: "exercise"
+}, {
+    label: "Chores",
+    name: "noteTag",
+    value: "chores",
+    type: "radio",
+    forLabel: "chores"
+}, {
+    label: "Creativity",
+    name: "noteTag",
+    value: "creativity",
+    type: "radio",
+    forLabel: "creativity"
+}, {
+    label: "Others",
+    name: "noteTag",
+    value: "others",
+    type: "radio",
+    forLabel: "others"
+}]

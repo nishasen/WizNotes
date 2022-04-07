@@ -12,11 +12,7 @@
     --black-bga-theme: rgba(16, 10, 5, 0.6);
 
     --gryffindor: rgb(140, 25, 38);
-    --gryffindor-ab: rgba(140, 25, 38, 0.1);
     --hufflepuff: rgb(218, 158, 0);
-    --hufflepuff-ab: rgba(218, 158, 0, 0.1);
     --ravenclaw: rgb(62, 105, 156);
-    --ravenclaw-ab: rgba(62, 105, 156, 0.1);
-    --slytherin: rgb(26, 100, 69);
-    --slytherin-ab: rgb(26, 100, 69, 0.1);   
+    --slytherin: rgb(26, 100, 69); 
 }
