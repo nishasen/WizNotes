@@ -29,5 +29,12 @@ const tagCheck = (state, data) => {
       : data.filter((note) => state.sortByTag.includes(note.noteTag));
   };
 
-export { Compose, dateCheck, priorityCheck, tagCheck };
+const searchCheck = (state, data) => {
+  return state.searchByText ? 
+    data.filter(note => 
+      note.noteTag.toLowerCase().includes(state.searchByText.toLowerCase()) || 
+      note.noteTitle.toLowerCase().includes(state.searchByText.toLowerCase())) : data;
+}
+
+export { Compose, dateCheck, priorityCheck, tagCheck,searchCheck };
 

@@ -34,6 +34,7 @@
     justify-content: flex-start;
     gap: 0.5rem;
     padding: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .side-list-light {
@@ -59,6 +60,16 @@
 }
 
 .side-list-dark:hover {
+    background-color: var(--st-secondary-hover);
+}
+
+.focus-link-light {
+    border-radius: 1rem;
+    background-color: var(--st-primary-hover);
+}
+
+.focus-link-dark {
+    border-radius: 1rem;
     background-color: var(--st-secondary-hover);
 }
 

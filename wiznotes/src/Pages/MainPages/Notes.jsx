@@ -8,7 +8,7 @@ const Notes = () => {
     <>
       <Wallpaper />  
       <Topnav showHamburger={true}/>
-      <SideNavigation />
+      <SideNavigation noteFocus={true}/>
       <div className="pages">  
         <NotePage />
       </div>

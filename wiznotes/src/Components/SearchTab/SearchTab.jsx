@@ -10,19 +10,21 @@ const SearchTab = () => {
     const { themeState } = useTheme();
     const { theme } = themeState;
     const [ showFilter, setShowFilter ] = useState(false); 
+    const [searchText, setSearchText] = useState('');
     const { filterDispatch, filterState } = useFilter(); 
     const { sortByPriority, sortByDate, sortByTag } = filterState;
     const ShowFilterBox = () => {
       setShowFilter(true)
     }
-    const setText = theme==="light" ? "text-light" : "text-dark";   
-                                                                                                                                                                                                                                               
+    const setText = theme==="light" ? "text-light" : "text-dark";                                                                                                                                                                                                                                               
   return (
     <div className="searchtab">
         <div className="searchbar">
-            <input type="search" placeholder="Search your choice..." className={`basic-textfield-outlined search-box`}/>
-            <button className={`btn-md icon-md search-button ${theme==="light" ? "search-light" : "search-dark"}`}>
-            Search
+            <input type="search" placeholder="Search by tags or title" className="basic-textfield-outlined search-box" value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
+            <button className={`btn-md icon-md search-button ${theme==="light" ? "search-light" : "search-dark"}`} onClick={()=>{
+              filterDispatch({type: "SEARCH_NOTE", payload: searchText})
+              setSearchText('')}}>
+              Search
             </button>
         </div>
         <button className={`filter-button ${theme==="light" ? "button-light" : "button-dark"}`} onClick={ShowFilterBox}>Filter <BsFilterRight /></button>

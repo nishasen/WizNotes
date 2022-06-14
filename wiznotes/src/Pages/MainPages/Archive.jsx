@@ -7,7 +7,7 @@ const Archive = () => {
     <>
       <Wallpaper />  
       <Topnav showHamburger={true}/>
-      <SideNavigation />
+      <SideNavigation archiveFocus={true}/>
       <div className="pages">
         <ArchivePage />
       </div>

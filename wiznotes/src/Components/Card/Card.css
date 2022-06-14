@@ -39,7 +39,7 @@
 }
 
 .card-desc {
-    width: 10rem;
+    width: 100%;
     height: max-content;
     max-height: 8rem; 
     overflow: hidden;
@@ -107,6 +107,16 @@
 .dark-priority {
     background-color: var(--st-primary-color);
     color: var(--st-white);
+}
+
+.light-tag {
+    background-color: var(--st-black);
+    color: var(--st-secondary-color);
+}
+
+.dark-tag {
+    background-color: var(--st-white);
+    color: var(--st-primary-color);
 }
 
 .tag {

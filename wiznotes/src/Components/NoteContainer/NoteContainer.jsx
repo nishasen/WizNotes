@@ -84,7 +84,7 @@ const NoteContainer = () => {
                           value="medium"
                           label="Medium"
                           forLabel="medium"
-                          checked={form.notePriority==="low"}
+                          checked={form.notePriority==="medium"}
                           labelClassName="text-black" onChange={(e)=>handleChange(e)} required/>     
             <CheckboxRadio type="radio"
                           name="notePriority"

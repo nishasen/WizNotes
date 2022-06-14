@@ -1,8 +1,8 @@
-import { createContext, useContext, useReducer, useEffect, useState } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 import { useNote } from '..';
 import { GetNotes } from '../../APICalls';
 import { Reducer } from './Reducer';
-import { Compose,  dateCheck, priorityCheck, tagCheck } from './Utils';
+import { Compose,  dateCheck, priorityCheck, tagCheck, searchCheck } from './Utils';
 
 const FilterContext = createContext();
 const useFilter = () => useContext(FilterContext);
@@ -11,6 +11,7 @@ const FilterProvider = ({children}) => {
     const [filterState, filterDispatch] = useReducer(Reducer, {
         sortByDate: "",
         sortByPriority: "",
+        searchByText: "",
         sortByTag: []});
     const { noteState } = useNote();
     const { noteItems } = noteState;
@@ -18,7 +19,8 @@ const FilterProvider = ({children}) => {
         filterState,
         dateCheck,
         priorityCheck,
-        tagCheck
+        tagCheck,
+        searchCheck
     )(noteItems);
        
     return (

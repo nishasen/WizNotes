@@ -14,6 +14,7 @@ const NoteContext = createContext();
 const useNote = () => useContext(NoteContext);
 
 const NoteProvider = ({children}) => {
+    const [pinned, setPinned] = useState([]);
     const [noteState, noteDispatch] = useReducer(Reducer, {noteItems: []});
     const { response, noteLoading, error } = GetNotes();
     const [form, setForm] = useState(defaultForm);
@@ -24,6 +25,7 @@ const NoteProvider = ({children}) => {
 
     return (
         <NoteContext.Provider value={{form, setForm, 
+                                    pinned, setPinned,
                                     noteState, noteDispatch, 
                                     noteLoading, error, 
                                     showForm, setShowForm}}>

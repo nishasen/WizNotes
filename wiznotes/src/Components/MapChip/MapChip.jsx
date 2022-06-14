@@ -1,12 +1,19 @@
 import React from 'react'
+import { useNote } from '../../Context';
 import { PinnedChip } from '..';
 import "./MapChip.css";
-const chip = [1, 2,3, 4,5,6,7,8,9]
+
 const MapChip = () => {
+  const { pinned } = useNote();
   return (
-    <div className="map-chip">
-        {chip.map(item=><PinnedChip key={item}/>)}
-    </div>
+    <>
+    {pinned?.length===0 ?
+      ""
+      : 
+      <div className="map-chip">
+        {pinned.map(item=><PinnedChip item={item} key={item._id}/>)}
+      </div>}
+    </>  
   )
 }
 

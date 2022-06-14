@@ -11,15 +11,14 @@ import { useArchive, useNote, useTheme, useTrash } from '../../Context';
 import { DeleteArchive, DeleteNote, PostArchive, RestoreArchive } from '../../APICalls';
 
 const Card = ({showArchive, showEdit, showTrash, note}) => {
-  const { noteTitle, noteBody, noteTag, notePriority, noteDate } = note;
+  const { noteTitle, noteBody, noteTag, notePriority, noteDate, _id } = note;
   const { trashDispatch } = useTrash();
-  const pin = false;
   const { themeState } = useTheme();
   const { theme } = themeState;
   const [showPalette, setShowPalette] = useState(false);
   const [background, setBackground] = useState("");
   const { archiveDispatch } = useArchive();
-  const { setForm, noteDispatch, setShowForm } = useNote();
+  const { setForm, noteDispatch, setShowForm, setPinned, pinned } = useNote();
   const setBackgroundColor = (color) => {
    localStorage.setItem(note._id, color);  
    setBackground(color);
@@ -30,18 +29,18 @@ const Card = ({showArchive, showEdit, showTrash, note}) => {
     <div className={`card ${cardBg}`} style={{backgroundColor: localStorage.getItem(note._id)}}>
       <div className="priority-tag">
         <div className={`tag ${theme==="light" ? "light-priority" : "dark-priority"}`}>{notePriority.toUpperCase()}</div>
-        <div className={`tag ${theme==="light" ? "light-priority" : "dark-priority"}`}>{noteTag.toUpperCase()}</div>
+        <div className={`tag ${theme==="light" ? "light-tag" : "dark-tag"}`}>{noteTag.toUpperCase()}</div>
       </div> 
       <div className="card-header">
         <div className="title-div">
           <h3 className={`card-title ${textTheme}`}>{noteTitle}</h3>
         </div>
-        {showArchive ? pin ? <Icon>
-          <BsPinAngleFill className="card-icon"/>
+        {showArchive ? pinned.find(note => note._id===_id) ? <Icon>
+          <BsPinAngleFill className="card-icon" onClick={()=>setPinned(pinned.filter(note=> note._id!==_id))}/>
         </Icon>
         :
         <Icon>
-          <BsPinAngle className="card-icon"/>
+          <BsPinAngle className="card-icon" onClick={()=>setPinned((prev)=>[...prev, note])}/>
         </Icon>
         :
         ""}

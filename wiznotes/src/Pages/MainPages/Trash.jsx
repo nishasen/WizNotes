@@ -7,7 +7,7 @@ const Trash = () => {
     <>
       <Wallpaper />  
       <Topnav showHamburger={true}/>
-      <SideNavigation />
+      <SideNavigation trashFocus={true}/>
       <div className="pages">
         <TrashPage />
       </div>

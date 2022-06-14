@@ -7,7 +7,7 @@ import { Icon } from '..';
 import { useTheme } from '../../Context';
 import './SideNavigation.css';
 
-const SideNavigation = () => {
+const SideNavigation = ({noteFocus, archiveFocus, trashFocus}) => {
     const navigate = useNavigate();
     const { themeState } = useTheme();
     const { theme } = themeState;
@@ -25,13 +25,7 @@ const SideNavigation = () => {
                     <h3 className={setText}>Home</h3>
                 </Link>      
             </li>
-            <li className={`dis-flex side-list ${setList}`}>
-            <Icon iconborder={false}>
-                <FaUserCircle className="side-icons"/>
-            </Icon>
-            <h3 className={setText}>Profile</h3>
-            </li>
-            <li className={`dis-flex side-list ${setList}`}>
+            <li className={`dis-flex side-list ${setList} ${noteFocus && (theme==="light" ? "focus-link-light" : "focus-link-dark")}`}>
                 <Link to="/notes" className={`btn-link path-link`}>
                     <Icon iconborder={false}>
                         <FaStickyNote className="side-icons"/>
@@ -39,7 +33,7 @@ const SideNavigation = () => {
                     <h3 className={setText}>Notes</h3>
                 </Link>
             </li>
-            <li className={`dis-flex side-list ${setList}`}>
+            <li className={`dis-flex side-list ${setList} ${archiveFocus && (theme==="light" ? "focus-link-light" : "focus-link-dark")}`}>
                 <Link to="/archive" className={`btn-link path-link`}>
                     <Icon iconborder={false}>
                         <MdArchive className="side-icons"/>
@@ -47,7 +41,7 @@ const SideNavigation = () => {
                     <h3 className={setText}>Archieve</h3>
                 </Link>
             </li>
-            <li className={`dis-flex side-list ${setList}`}>
+            <li className={`dis-flex side-list ${setList} ${trashFocus && (theme==="light" ? "focus-link-light" : "focus-link-dark")}`}>
                 <Link to="/trash" className={`btn-link path-link`}>
                     <Icon iconborder={false}>
                         <FaTrash className="side-icons"/>
