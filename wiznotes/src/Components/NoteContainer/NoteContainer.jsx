@@ -15,7 +15,7 @@ const NoteContainer = () => {
   const [showPriority, setShowPriority] = useState(true);
   const [showLabel, setShowLabel] = useState(true);
   const { filterDispatch } = useFilter();
-  const { form, setForm, noteDispatch, showForm, setShowForm } = useNote();
+  const { form, setForm, noteDispatch, showForm, setShowForm, pinned, setPinned } = useNote();
   const noteContainerTheme = theme === "light" ? "note-light" : "note-dark";
   const setText = theme=== "light" ? "text-light" : "text-dark";  
   const handleChange = (e) => {
@@ -29,6 +29,7 @@ const NoteContainer = () => {
    
     if(form.hasOwnProperty('_id')) {
       UpdateNote(form, noteDispatch)
+      setPinned(pinned?.map(note => note._id===form._id ? form : note))
     } else {
       PostNotes(form, noteDispatch);
     }
