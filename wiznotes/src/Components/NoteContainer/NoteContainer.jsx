@@ -5,7 +5,7 @@ import { BsFillPlusCircleFill } from 'react-icons/bs';
 import { FaTag } from 'react-icons/fa';
 import { labels } from '../../GeneralFunctions';
 import { Button, CheckboxRadio, Editor, Icon } from '..';
-import { useNote, useTheme } from '../../Context';
+import { useFilter, useNote, useTheme } from '../../Context';
 import './NoteContainer.css';
 import { PostNotes, UpdateNote } from '../../APICalls';
 
@@ -14,6 +14,7 @@ const NoteContainer = () => {
   const { theme } = themeState;
   const [showPriority, setShowPriority] = useState(true);
   const [showLabel, setShowLabel] = useState(true);
+  const { filterDispatch } = useFilter();
   const { form, setForm, noteDispatch, showForm, setShowForm } = useNote();
   const noteContainerTheme = theme === "light" ? "note-light" : "note-dark";
   const setText = theme=== "light" ? "text-light" : "text-dark";  
@@ -101,7 +102,7 @@ const NoteContainer = () => {
           <Icon>
             <FaTag className="note-icons" onClick={()=>setShowLabel(!showLabel)}/>
           </Icon>
-          <button className="btn-submit" type="submit">
+          <button className="btn-submit" type="submit" onClick={()=>filterDispatch({type: "CLEAR_FILTER"})}>
           <Icon>
             <BsFillPlusCircleFill className="note-icons"/>
           </Icon>
